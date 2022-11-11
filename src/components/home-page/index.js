@@ -8,7 +8,7 @@ function HomePage() {
     <div className='homePage'>
         <h1>Choose your Game</h1>
         <h3>You don't need a pen, a paper, a dice...</h3>
-        <h3>Only click</h3>
+        <h3>just click</h3>
         <div className='homePageImg'>
             <Link to={'/munchkin'}>
                 <img src="./images/main/munchkin.png" alt="munchkin"></img>
