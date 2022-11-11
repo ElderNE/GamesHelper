@@ -1,0 +1,44 @@
+.homePage {
+    min-height: calc(100vh - 98px);
+}
+.homePage > h1, .homePage > h3 {
+    text-align: center;
+    color: #491B16;
+    font-weight: 400;
+}
+@media screen and (max-width: 420px) {
+    .homePageImg {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .homePageImg img {
+        width: 80vw;
+        height: 80vw;
+        margin: 10px;
+    }
+}
+@media screen and (min-width: 420px) {
+    .homePageImg {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .homePageImg img {
+        width: 20vw;
+        height: 20vw;
+        margin: 10px;
+    }
+    .homePageImg img:hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
+    .homePageImg img:not(:hover) {
+        transform: scale(1);
+        transition: .2s;
+    }
+}

@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    background-color: #FBCE98;
+}
+.header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    color: #491B16;
+}
+.headerDice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background: #491B16;
+    padding: 0 10px;
+    margin: 5px 10px;
+    color: #FBCE98;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.dice {
+    background-image: url(../../../public/images/dice/dice.png);
+    background-position: center;
+    background-size: cover;
+    width: 70px;
+    height: 40px;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50px;
+}
+.header-games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.header-games p {
+    color: #491B16;
+}
+@media screen and (min-width: 320px) {
+    .header {
+        flex-direction: row;
+    }    
+    .header  h1 {
+        margin: 0 10px;
+    }
+    .header-games p {
+        margin: 0 10px;
+        font-size: 1.7em;
+    } 
+}
+@media screen and (max-width: 320px) {
+    .header {
+        flex-direction: row-reverse;
+    }    
+    .header  h1 {
+        display: none;
+    }
+    .header-games p {
+        margin: 0 10px;
+        font-size: 1em;
+    } 
+}
+.languge {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}

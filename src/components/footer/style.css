@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 20px;
+    background-color: #FBCE98;
+    font-size: 12px;
+    padding: 5px 20px;
+}
+.footer p {
+    margin: 0 5px;
+    color: #491B16;
+}

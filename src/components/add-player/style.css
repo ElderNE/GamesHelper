@@ -1,0 +1,57 @@
+.addPlayer {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #FFF1E4;
+}
+.addPlayerButtonClear {
+    margin: 2px;
+    width: 70px;
+    color: #491B16;
+    border: #491B16 solid 1px;
+    background-color: #FFF1E4;
+    border-radius: 3px;
+}
+.addPlayerForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.addPlayerForm label {
+    color:#491B16;
+    margin: 0 5px;
+    margin: 0 0 2px 0;
+}
+.addPlayerForm input, .addPlayerForm input:hover, 
+.addPlayerForm input:focus, .addPlayerForm input:active {
+    color:#491B16;
+    margin: 0 5px;
+    border: #491B16 1px solid;
+    border-radius: 2px;
+    width: 80px;
+}
+.addPlayerButtonClear:hover, .addPlayerButtonClear:active {
+    color: #FFF1E4;
+    border: #491B16 solid 1px;
+    background-color: #491B16;
+    border-radius: 3px;
+}
+.addPlayerButtonAdd {
+    margin: 4px 2px;
+    width: 30px;
+    color: #491B16;
+    border: #491B16 solid 1px;
+    background-color: #FFF1E4;
+    border-radius: 3px;
+}
+.addPlayerButtonAdd:active, .addPlayerButtonAdd:hover{
+    color: #FFF1E4;
+    border: #491B16 solid 1px;
+    background-color: #491B16;
+    border-radius: 3px;
+}
