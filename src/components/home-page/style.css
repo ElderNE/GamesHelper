@@ -14,6 +14,14 @@
         justify-content: space-around;
         align-items: center;
     }
+    .homePageImg h5 {
+        color: #491B16;
+        text-align: center;
+        margin: 5px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+    }
     .homePageImg img {
         width: 80vw;
         height: 80vw;
@@ -28,6 +36,14 @@
         justify-content: space-around;
         align-items: center;
     }
+    .homePageImg h5 {
+        color: #491B16;
+        text-align: center;
+        margin: 5px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+    }
     .homePageImg img {
         width: 20vw;
         height: 20vw;
@@ -41,4 +57,11 @@
         transform: scale(1);
         transition: .2s;
     }
+}
+.message {
+    color: #491B16;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
 }

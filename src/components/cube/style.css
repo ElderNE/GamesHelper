@@ -21,7 +21,7 @@
     height: 50px;
     width: 50px;
     transform-style: preserve-3d;
-    animation: rotate 4s linear;
+    animation: rotate 2s linear;
 }
 .cube > div {
     position: absolute;

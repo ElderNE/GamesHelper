@@ -39,6 +39,7 @@
         color: #FFF1E4;
         position: relative;
         border: #491B16 2px solid;
+        margin: 0 10px;
     }
     .counterPlayerButtonPlus::before {
         content: "+";
@@ -49,6 +50,26 @@
         position: absolute;
         top: -3px;
         left: 2px;
+    }
+    .counterPlayerButtonMinus {
+        background-color: #491B16;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #FFF1E4;
+        position: relative;
+        border: #491B16 2px solid;
+        margin: 0 10px;
+    }
+    .counterPlayerButtonMinus::before {
+        content: "-";
+        color: #FFF1E4;
+        font-family: Arial;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: -5px;
+        left: 5px;
     }
 }
 @media screen and (min-width: 420px) and (max-width: 960px) {
@@ -91,6 +112,7 @@
         color: #FFF1E4;
         position: relative;
         border: #491B16 2px solid;
+        margin: 0 10px;
     }
     .counterPlayerButtonPlus::before {
         content: "+";
@@ -101,6 +123,26 @@
         position: absolute;
         top: -3px;
         left: 2px;
+    }
+    .counterPlayerButtonMinus {
+        background-color: #491B16;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #FFF1E4;
+        position: relative;
+        border: #491B16 2px solid;
+        margin: 0 10px;
+    }
+    .counterPlayerButtonMinus::before {
+        content: "-";
+        color: #FFF1E4;
+        font-family: Arial;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: -5px;
+        left: 5px;
     }
 }
 
@@ -144,6 +186,7 @@
         color: #FFF1E4;
         position: relative;
         border: #491B16 2px solid;
+        margin: 0 10px;
     }
     .counterPlayerButtonPlus::before {
         content: "+";
@@ -154,5 +197,25 @@
         position: absolute;
         top: -3px;
         left: 2px;
+    }
+    .counterPlayerButtonMinus {
+        background-color: #491B16;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #FFF1E4;
+        position: relative;
+        border: #491B16 2px solid;
+        margin: 0 10px;
+    }
+    .counterPlayerButtonMinus::before {
+        content: "-";
+        color: #FFF1E4;
+        font-family: Arial;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: -5px;
+        left: 5px;
     }
 }

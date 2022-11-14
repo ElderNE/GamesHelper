@@ -8,7 +8,7 @@ export const playersUnoSlice = createSlice({
   reducers: {
     addPlayer: (state, player) => {
         if((state.value.length < 10) && player.payload) {
-          state.value.push([player.payload, 1])
+          state.value.push([player.payload, 0])
           if(localStorage)
             localStorage.setItem('uno', JSON.stringify(state.value))
         }    
@@ -19,9 +19,11 @@ export const playersUnoSlice = createSlice({
           localStorage.removeItem('uno');
     },
     changeCount: (state, player) => {
-        state.value[player.payload[1]][1] =  player.payload[0];
+      if(parseInt(player.payload[0])) {
+        state.value[player.payload[1]][1] += parseInt(player.payload[0]);
         if(localStorage)
           localStorage.setItem('uno', JSON.stringify(state.value))
+      }    
     },
     setValue: (state, player) => {
       state.value = player.payload;

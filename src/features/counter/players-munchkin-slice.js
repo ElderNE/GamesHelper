@@ -19,9 +19,11 @@ export const playersMunchkinSlice = createSlice({
           localStorage.removeItem('munchkin');
     },
     changeCount: (state, player) => {
-      state.value[player.payload[1]][1] =  player.payload[0];
-      if(localStorage)
-        localStorage.setItem('munchkin', JSON.stringify(state.value));
+      if(parseInt(player.payload[0])) {
+        state.value[player.payload[1]][1] += parseInt(player.payload[0]);
+        if(localStorage)
+            localStorage.setItem('uno', JSON.stringify(state.value))
+      }
     },
     setValue: (state, player) => {
       state.value = player.payload;

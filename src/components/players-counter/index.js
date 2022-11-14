@@ -1,5 +1,6 @@
 import React from 'react';
 import Player from '../../components/player';
+import AddPlayerAction from '../add-player-action';
 import './style.css';
 
 function PlayersCounter( {game, players, chCount} ) {
@@ -15,6 +16,7 @@ function PlayersCounter( {game, players, chCount} ) {
   return (
     <div className='playersCounter'>
       {list}
+      {!players.length && <AddPlayerAction/>} 
     </div>
   );
 }

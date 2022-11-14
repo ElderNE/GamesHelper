@@ -16,12 +16,12 @@ function Munchkin() {
                               e.preventDefault();
                               e.target.reset();},[addPlayer]),
     clPl: useCallback(() => dispatch(clearPlayers()), [clearPlayers]),
-    chCount: useCallback((e, i) => {dispatch(changeCount([e.target.number.value, i]));
+    chCount: useCallback((e, i) => {dispatch(changeCount([ (e.target.value === 'minus')? -1: 1 , i]));
                               e.preventDefault();
-                              e.target.reset();},[changeCount]),
+                              e.currentTarget.reset()},[changeCount]),
   };
 
-  //check players in storage
+  //check players in lockalStorage
   useEffect(() => {
     if(localStorage.getItem('munchkin')) {
       dispatch(setValue(JSON.parse(localStorage.getItem('munchkin'))));

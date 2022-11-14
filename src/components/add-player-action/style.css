@@ -1,0 +1,35 @@
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.addPlayerAction {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.addPlayerAction > h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4A1A15;
+    font-weight: 400;
+    font-size: 32px;
+}
+.addPlayerAction > div {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4A1A15;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 10px;
+    animation: grow 1s infinite;
+}
