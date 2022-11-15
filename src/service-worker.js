@@ -65,6 +65,38 @@ registerRoute(
   })
 )
 
+registerRoute(
+  ({ request }) => request.destination === 'style',
+  new CacheFirst({
+    cacheName: 'style',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200]
+      }),
+      new ExpirationPlugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60 * 12// 1 year
+      })
+    ]
+  })
+)
+
+registerRoute(
+  ({ request }) => request.destination === 'script',
+  new CacheFirst({
+    cacheName: 'script',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200]
+      }),
+      new ExpirationPlugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60 * 12// 1 year
+      })
+    ]
+  })
+)
+
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener('message', (event) => {
