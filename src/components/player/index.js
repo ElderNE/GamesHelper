@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function Player( { i, game, players, chCount } ) {
+function Player( { i, game, playerName, playerCount, chCount } ) {
 
   //munchkin without input,  
   //check the button type with target, 
@@ -9,7 +9,7 @@ function Player( { i, game, players, chCount } ) {
   //players: array with data about players (name and count)
   return (
     <div className='player'>
-        <p>{players[i][0]+': '+players[i][1]}</p>
+        <p>{playerName+': '+playerCount}</p>
         <form className='counterPlayer' onClick={(e) => chCount(e, i)}>
             <button type="button" value="minus" className='counterPlayerButtonMinus'></button>
             {game === "uno" && <input type="text" id="inputText" placeholder="number" maxLength="3"></input>}

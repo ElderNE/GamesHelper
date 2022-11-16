@@ -10,7 +10,8 @@ function PlayersCounter( {game, players, chCount} ) {
     list.push(<Player key={i} 
                       i={i} 
                       game={game} 
-                      players={players} 
+                      playerName={players[i][0]}
+                      playerCount={players[i][1]}
                       chCount={chCount}/>);}
 
   return (
