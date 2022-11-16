@@ -66,22 +66,29 @@
         margin: 10px;
     }
     .counterPlayer > input {
-        width: 40px;
+        width: 35px;
         margin: 0 10px;
+        font-size: 10px;
+        font-family: Arial;
+        font-weight: 400;
     }
     .counterPlayerButtonPlus {
         margin: 0 5px;
+        width: 25px;
+        height: 25px;
     }
     .counterPlayerButtonPlus::before {
-        top: -5px;
-        left: 1.5px;
+        top: -7px;
+        left: 1px;
     }
     .counterPlayerButtonMinus {
         margin: 0 5px;
+        width: 25px;
+        height: 25px;
     }
     .counterPlayerButtonMinus::before {
-        top: -8px;
-        left: 6px;
+        top: -10px;
+        left: 5px;
     }
 }
 @media screen and (min-width: 420px) and (max-width: 960px) {
