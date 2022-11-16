@@ -12,7 +12,7 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { CacheFirst } from 'workbox-strategies';
-import { CacheableResponsePlugin } from 'workbox-cacheable-response'
+import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 
 clientsClaim();
 
@@ -26,6 +26,7 @@ precacheAndRoute(self.__WB_MANIFEST);
 // are fulfilled with your index.html shell. Learn more at
 // https://developers.google.com/web/fundamentals/architecture/app-shell
 const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
+
 registerRoute(
   // Return false to exempt requests from being fulfilled by index.html.
   ({ request, url }) => {
@@ -64,45 +65,27 @@ registerRoute(
     ]
   })
 )
+//update
 
-registerRoute(
-  ({ request }) => request.destination === 'style',
-  new CacheFirst({
-    cacheName: 'style',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200]
-      }),
-      new ExpirationPlugin({
-        maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60 * 12// 1 year
-      })
-    ]
-  })
-)
-
-registerRoute(
-  ({ request }) => request.destination === 'script',
-  new CacheFirst({
-    cacheName: 'script',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200]
-      }),
-      new ExpirationPlugin({
-        maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60 * 12// 1 year
-      })
-    ]
-  })
-)
-
-// This allows the web app to trigger skipWaiting via
-// registration.waiting.postMessage({type: 'SKIP_WAITING'})
-self.addEventListener('message', (event) => {
+const broadcast = new BroadcastChannel('sw-update-channel');
+self.addEventListener('install', function (event) {
+  // Inform the page every time a new service worker is installed
+  broadcast.postMessage({type: 'CRITICAL_SW_UPDATE'});
+});
+broadcast.onmessage = (event) => {
+  console.log('event')
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
-});
+}
+
+/*/ This allows the web app to trigger skipWaiting via
+// registration.waiting.postMessage({type: 'SKIP_WAITING'})
+self.addEventListener('message', (event) => {
+  console.log('SKIP_WAITING')
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});*/
 
 // Any other custom service worker logic can go here.

@@ -1,0 +1,36 @@
+.newVersion {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    border: #491B16 solid 2px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.newVersion > p {
+    color: #491B16;
+    font-family: Arial;
+    font-size: 14px;
+}
+.newVersion > button {
+    color: #491B16;
+    font-family: Arial;
+    font-size: 14px;
+    background-color: #FBCE98;
+    border: #491B16 solid 1px;
+    border-radius: 2px;
+}
+.newVersion > button:hover {
+    color: #FBCE98;
+    font-family: Arial;
+    font-size: 14px;
+    background-color: #491B16;
+    border: #491B16 solid 1px;
+    border-radius: 2px;
+}

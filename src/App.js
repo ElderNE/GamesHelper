@@ -6,7 +6,7 @@ import Munchkin from './containers/games/munchkin';
 import Uno from './containers/games/uno';
 
 function App() {
-  
+
   return (
     <BrowserRouter>
       <Routes>

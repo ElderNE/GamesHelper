@@ -60,7 +60,8 @@ function registerValidSW(swUrl, config) {
                 'New content is available and will be used when all ' +
                   'tabs for this page are closed. See https://cra.link/PWA.'
               );
-
+              const broadcast = new BroadcastChannel('sw-update-channel');
+              broadcast.postMessage({type: 'CRITICAL_SW_UPDATE'});
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
