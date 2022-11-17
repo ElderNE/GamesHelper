@@ -11,6 +11,7 @@ import NewVersion from '../../components/new-version';
 
 function Layout({children}) {
   
+  const dispatch = useDispatch();
   //update version
   const broadcast = new BroadcastChannel('sw-update-channel');
   broadcast.onmessage = (event) => {
@@ -22,8 +23,7 @@ function Layout({children}) {
   };
   const rebootSW = () => {
     dispatch(closePopUp());
-    localStorage.setItem('update', "0")
-    const broadcast = new BroadcastChannel('sw-update-channel');
+    localStorage.setItem('update', "0");
     broadcast.postMessage({type: 'SKIP_WAITING'});
   }
   useEffect(() => {
@@ -32,7 +32,6 @@ function Layout({children}) {
     }
   },[]);
   //work with store
-  const dispatch = useDispatch();
   const count = useSelector((state) => state.counter.value);
   const modal = useSelector((state) => state.modal.value);
   const popUpUpgrade = useSelector((state) => state.popUpUpgrade.value);
